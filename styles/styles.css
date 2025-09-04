@@ -1,16 +1,5 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-=======
-@import url(https://fonts.googleapis.com/css?family=Outfit:100,
-  200,
-  300,
-  regular,
-  500,
-  600,
-  700,
-  800,
-  900);
->>>>>>> 77097b39258b6b045661e8566f430c9f12c8f82f
+
 @import url(style-header.css);
 
 body {

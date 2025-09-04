@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 38,
             "patches": [
                 {
                     "date": 1756995569959,
@@ -156,6 +156,10 @@
                 {
                     "date": 1757017835149,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,5 @@\n-@import url(\r\n-  https://fonts.googleapis.com/css?family=Outfit:100,\r\n-  200,\r\n-  300,\r\n-  regular,\r\n-  500,\r\n-  600,\r\n-  700,\r\n-  800,\r\n-  900\r\n-);\r\n+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');\r\n @import url(style-header.css);\r\n \r\n body {\r\n   margin: 0;\r\n@@ -18,9 +8,9 @@\n   background-image: url(\"../img/background.png\");\r\n   background-size: cover;\r\n   background-position: center;\r\n   box-sizing: border-box;\r\n-  font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n+   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n }\r\n \r\n .container {\r\n   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n"
+                },
+                {
+                    "date": 1757018249597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');\r\n+@import url(\"https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap\");\r\n+\r\n @import url(style-header.css);\r\n \r\n body {\r\n   margin: 0;\r\n@@ -8,9 +9,9 @@\n   background-image: url(\"../img/background.png\");\r\n   background-size: cover;\r\n   background-position: center;\r\n   box-sizing: border-box;\r\n-   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n+  font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n }\r\n \r\n .container {\r\n   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n@@ -38,10 +39,29 @@\n   padding: 0.5em;\r\n   border-radius: 0.5em;\r\n   font-size: 1.5em;\r\n   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n+  min-width: 12rem;\r\n }\r\n \r\n+#startButton:hover {\r\n+  background-color: green;\r\n+}\r\n+#beendenButton {\r\n+  background-color: #6d7de9;\r\n+  color: #fff;\r\n+  border: none;\r\n+  padding: 0.5em;\r\n+  border-radius: 0.5em;\r\n+  font-size: 1.5em;\r\n+  font-family: \"Outfit\", Arial, Helvetica, sans-serif;\r\n+  min-width: 12rem;\r\n+}\r\n+\r\n+#beendenButton:hover {\r\n+  background-color: red;\r\n+}\r\n+\r\n /* Preisstufen */\r\n \r\n #preisStufenBox div {\r\n   margin: 0;\r\n"
                 }
             ],
             "date": 1756995569959,
