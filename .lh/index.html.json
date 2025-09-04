@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1756984469840,
@@ -20,6 +20,10 @@
                 {
                     "date": 1757017974114,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n \r\n-    <script type=\"module\" src=\"script.js\" defer></script>\r\n-    <script type=\"module\" src=\"script-questions.js\" defer></script>\r\n+    <script type=\"module\" src=\"./script.js\" defer></script>\r\n+    <script type=\"module\" src=\"./script-questions.js\" defer></script>\r\n \r\n     <link rel=\"stylesheet\" href=\"./styles/styles.css\" />\r\n     <title>Wer wird Millionär</title>\r\n   </head>\r\n"
+                },
+                {
+                    "date": 1757018102949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,14 @@\n <html lang=\"de\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n-<<<<<<< HEAD\r\n \r\n-    <script type=\"module\" src=\"./script.js\" defer></script>\r\n-    <script type=\"module\" src=\"./script-questions.js\" defer></script>\r\n-=======\r\n     <link rel=\"icon\" type=\"image/x-icon\" href=\"./img/favicon.ico\" />\r\n     <script type=\"module\" src=\"script.js\" defer></script>\r\n     <script type=\"module\" src=\"script-questions.js\" defer></script>\r\n->>>>>>> 77097b39258b6b045661e8566f430c9f12c8f82f\r\n \r\n+\r\n     <link rel=\"stylesheet\" href=\"./styles/styles.css\" />\r\n     <title>Wer wird Millionär</title>\r\n   </head>\r\n   <body>\r\n"
                 }
             ],
             "date": 1756984469840,
