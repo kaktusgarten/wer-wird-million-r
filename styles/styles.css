@@ -3,15 +3,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: blue;
+  background-color: #061196;
   background-image: url("/img/background.png");
   background-size: cover;
   background-position: center;
 }
 
 div {
-  border: 1px solid #fff;
+  border: 2px solid #6d7de9;
   padding: 1em;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 .container {
@@ -19,29 +21,40 @@ div {
   width: 90vw;
   height: 95vh;
   margin: auto;
-  border: 1px solid white;
+  border: 2px solid #6d7de9;
   color: #fff;
   padding: 1em;
-
+  border-radius: 1em;
   display: flex;
   flex-direction: column;
 }
 
-.contentUndPreisleiter {
+#weitererContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  background: #061193;
 }
 
-.antwortenWrapper {
+.contentUndPreisleiter {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#antwortenWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 600px) {
-  .antwortenWrapper {
-    display: grid;
+  #antwortenWrapper {
     grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
   }
+
+  .contentUndPreisleiter {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logo {
+  max-width: 100%;
 }
