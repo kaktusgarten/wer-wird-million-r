@@ -5,4 +5,6 @@ const preisstufenBox = document.getElementById('preisStufenBox');
 const frage = document.getElementById('frage');
 const antwortenWrapper = document.getElementById('antwortenWrapper');
 
-startBtn.addEventListener
+startBtn.addEventListener("click",() => {
+   
+})
