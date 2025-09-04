@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <script type="module" src="script.js" defer></script>
     <script type="module" src="script-questions.js" defer></script>
 
@@ -13,8 +13,12 @@
   <body>
     <!-- Hier gehts los -->
     <div class="container">
-      <header>
+      <header class="header">
         <button id="startButton">Start</button>
+        <div id="statusContainer">
+          <p id="statusAusgabe">Herzlich Willkommen!</p>
+        </div>
+        <button id="beendenButton">Beenden</button>
       </header>
       <main>
         <section class="contentUndPreisleiter">
