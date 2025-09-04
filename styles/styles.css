@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #061196;
-  background-image: url("/img/background.png");
+  background-image: url("../img/background.png");
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
