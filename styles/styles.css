@@ -54,3 +54,7 @@ div {
     grid-template-columns: 1fr;
   }
 }
+
+.logo {
+  max-width: 100%;
+}
