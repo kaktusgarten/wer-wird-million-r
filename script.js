@@ -2,11 +2,11 @@ import quizQuestions from "./script-questions.js";
 
 console.log(quizQuestions);
 const startBtn = document.getElementById("startButton");
-const stopBtn = document.getElementById("endButton");
 const preisstufenBox = document.getElementById("preisStufenBox");
 const frage = document.getElementById("frage");
 const antwortenWrapper = document.getElementById("antwortenWrapper");
 
+let preisstufen = document.getElementsByClassName("preisstufen");
 let currentQuestion = 0;
 
 const checkAnswer = (event) => {
@@ -16,13 +16,9 @@ const checkAnswer = (event) => {
       event.target.textContent === answer.text && answer.correct === true
   );
 
-  let preisstufen = document.getElementsByClassName("preisstufen");
-
   for (let i = 0; i < preisstufen.length; i++) {
     preisstufen[i].style.background = "inherit";
   }
-
-  preisstufen[14 - currentQuestion].style.background = "red";
 
   if (filteredArray.length === 0) {
     event.target.style.background = "red";
@@ -31,17 +27,17 @@ const checkAnswer = (event) => {
 
     return;
   }
-
+  preisstufen[14 - currentQuestion].style.background = "red";
   event.target.style.background = "green";
   currentQuestion++;
   setTimeout(() => {
-    antwortenWrapper.innerHTML = "";
     startGame();
   }, 3000);
 
   console.log("filteredArray", filteredArray);
 };
 const startGame = () => {
+  antwortenWrapper.innerHTML = "";
   frage.textContent = quizQuestions[currentQuestion].question;
 
   quizQuestions[currentQuestion].answers.forEach((answer) => {
@@ -54,8 +50,15 @@ const startGame = () => {
   });
 };
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", resetGame);
 
+function resetGame() {
+  currentQuestion = 0;
+  for (let i = 0; i < preisstufen.length; i++) {
+    preisstufen[i].style.cssText = `background-color: none`;
+  }
+  startGame();
+}
 startGame();
 
 checkAnswer();
