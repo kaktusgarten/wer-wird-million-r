@@ -1,2 +1,2 @@
-# wer-wird-million-r
+# wer-wird-millionaer
 Ein Super Toller Wer wird Millionär Clone
