@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
+
+    <script src="script.js" defer></script>
+    <script src="script-questions.js" defer></script>
+
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Wer wird Millionär</title>
   </head>
@@ -11,21 +14,22 @@
     <!-- Hier gehts los -->
     <div class="container">
       <header>
-        <h1>Wer wird Millionär</h1>
+        <button id="startButton">Start</button>
+        <button id="endButton">Ende</button>
       </header>
       <main>
         <section class="contentUndPreisleiter">
-          <div>LINKs - Für weiteren Inhalt</div>
-          <div>RECHTS - 1. 2. 3. Preis Stufen Leiter</div>
+          <div id="weitererContent">Wer wird Millionär BILD hier</div>
+          <div id="preisStufenBox">RECHTS - 1. 2. 3. Preis Stufen Leiter</div>
         </section>
-        <section>
-          <div>HIER KOMMT DIE FRAGE REIN</div>
+        <section id="frage">
+          <div class="frageWrapper"><p id="frage">HIER KOMMT DIE FRAGE REIN</p></div>
         </section>
-        <section class="antwortenWrapper">
-          <div class="antwort1">A: bla</div>
-          <div class="antwort2">B: bla</div>
-          <div class="antwort3">C: bla</div>
-          <div class="antwort4">D: bla</div>
+        <section id="antwortenWrapper">
+          <div id="antwort1" class="antwort">A: bla</div>
+          <div id="antwort2" class="antwort">B: bla</div>
+          <div id="antwort3" class="antwort">C: bla</div>
+          <div id="antwort4" class="antwort">D: bla</div>
         </section>
       </main>
       <footer></footer>
