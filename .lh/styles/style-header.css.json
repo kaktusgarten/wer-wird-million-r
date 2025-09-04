@@ -1,0 +1,34 @@
+{
+    "sourceFile": "styles/style-header.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1756995943251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756996008691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,17 @@\n   700,\n   800,\n   900\n );\n+\n+\n+.container {\n+  font-family: \"Outfit\", Arial, Helvetica, sans-serif;\n+  width: 90vw;\n+  margin: auto;\n+  border: 2px solid #6d7de9;\n+  color: #fff;\n+  padding: 1em;\n+  border-radius: 1em;\n+  display: flex;\n+  flex-direction: column;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756996044131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n   800,\n   900\n );\n \n-\n .container {\n   font-family: \"Outfit\", Arial, Helvetica, sans-serif;\n   width: 90vw;\n   margin: auto;\n@@ -20,5 +19,5 @@\n   padding: 1em;\n   border-radius: 1em;\n   display: flex;\n   flex-direction: column;\n-}\n\\ No newline at end of file\n+}\n"
+                },
+                {
+                    "date": 1756996105491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,4 +20,13 @@\n   border-radius: 1em;\n   display: flex;\n   flex-direction: column;\n }\n+\n+#startButton {\n+  background-color: #6d7de9;\n+  color: #fff;\n+  border: none;\n+  padding: 0.5em;\n+  border-radius: 0.5em;\n+  font-size: 1.5em;\n+}\n"
+                },
+                {
+                    "date": 1756996146519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,3 @@\n-@import url(\n-  https://fonts.googleapis.com/css?family=Outfit:100,\n-  200,\n-  300,\n-  regular,\n-  500,\n-  600,\n-  700,\n-  800,\n-  900\n-);\n \n-.container {\n-  font-family: \"Outfit\", Arial, Helvetica, sans-serif;\n-  width: 90vw;\n-  margin: auto;\n-  border: 2px solid #6d7de9;\n-  color: #fff;\n-  padding: 1em;\n-  border-radius: 1em;\n-  display: flex;\n-  flex-direction: column;\n-}\n \n-#startButton {\n-  background-color: #6d7de9;\n-  color: #fff;\n-  border: none;\n-  padding: 0.5em;\n-  border-radius: 0.5em;\n-  font-size: 1.5em;\n-}\n+\n"
+                }
+            ],
+            "date": 1756995943251,
+            "name": "Commit-0",
+            "content": "@import url(\n  https://fonts.googleapis.com/css?family=Outfit:100,\n  200,\n  300,\n  regular,\n  500,\n  600,\n  700,\n  800,\n  900\n);"
+        }
+    ]
+}

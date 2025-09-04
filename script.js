@@ -9,10 +9,10 @@ const antwortenWrapper = document.getElementById("antwortenWrapper");
 let preisstufen = document.getElementsByClassName("preisstufen");
 let currentQuestion = 0;
 
-const checkAnswer = (event) => {
+const checkAnswer = event => {
   console.log(event.target);
   const filteredArray = quizQuestions[currentQuestion].answers.filter(
-    (answer) =>
+    answer =>
       event.target.textContent === answer.text && answer.correct === true
   );
 
@@ -24,13 +24,23 @@ const checkAnswer = (event) => {
     event.target.style.background = "red";
     console.log("no correct answer");
     // alert("Sie haben Verloren...");
-
+    Array.from(antwortenWrapper.children).forEach(child =>
+      child.classList.add("disabled")
+    );
     return;
   }
   preisstufen[14 - currentQuestion].style.background = "red";
+  preisstufen[14 - currentQuestion].style.paddingInline = "1rem";
   event.target.style.background = "green";
+
+  Array.from(antwortenWrapper.children).forEach(child =>
+    child.classList.add("disabled")
+  );
   currentQuestion++;
   setTimeout(() => {
+    Array.from(antwortenWrapper.children).forEach(child =>
+      child.classList.remove("disabled")
+    );
     startGame();
   }, 3000);
 
@@ -40,11 +50,11 @@ const startGame = () => {
   antwortenWrapper.innerHTML = "";
   frage.textContent = quizQuestions[currentQuestion].question;
 
-  quizQuestions[currentQuestion].answers.forEach((answer) => {
+  quizQuestions[currentQuestion].answers.forEach(answer => {
     const antwort = document.createElement("div");
     antwort.textContent = answer.text;
     antwortenWrapper.appendChild(antwort);
-    antwort.addEventListener("click", (event) => {
+    antwort.addEventListener("click", event => {
       checkAnswer(event);
     });
   });
