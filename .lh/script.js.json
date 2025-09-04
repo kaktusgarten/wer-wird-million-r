@@ -1,0 +1,30 @@
+{
+    "sourceFile": "script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1756984530558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756984563702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n startBtn.addEventListener(\"click\", startGame);\n \n const startGame = () => {\n \n-  const\n \n+\n }\n"
+                },
+                {
+                    "date": 1756984795193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,9 @@\n const antwortenWrapper = document.getElementById(\"antwortenWrapper\");\n \n startBtn.addEventListener(\"click\", startGame);\n \n-const startGame = () => {};\n+let currentQuestion = 0;\n+const startGame = () => {\n+\n+  frage.textContent = quizQuestions[currentQuestion].question;\n+};\n"
+                },
+                {
+                    "date": 1756984811660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,8 @@\n let currentQuestion = 0;\n const startGame = () => {\n   frage.textContent = quizQuestions[currentQuestion].question;\n };\n+\n+\n+\n+startGame();\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1756984530558,
+            "name": "Commit-0",
+            "content": "import quizQuestions from './script-questions.js';\n\nconsole.log(quizQuestions);\nconst startBtn = document.getElementById(\"startButton\");\nconst stopBtn = document.getElementById('endButton');\nconst preisstufenBox = document.getElementById('preisStufenBox');\nconst frage = document.getElementById('frage');\nconst antwortenWrapper = document.getElementById('antwortenWrapper');\n\nstartBtn.addEventListener(\"click\", startGame);\n\nconst startGame = () => {\n\n  const\n\n}\n"
+        }
+    ]
+}
