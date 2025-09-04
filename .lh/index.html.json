@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1756984469840,
@@ -16,6 +16,10 @@
                 {
                     "date": 1756985361293,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,12 @@\n             <p id=\"frage\">HIER KOMMT DIE FRAGE REIN</p>\r\n           </div>\r\n         </section>\r\n         <section id=\"antwortenWrapper\">\r\n-          <div id=\"antwort1\" class=\"antwort\">A: bla</div>\r\n+          <!-- <div id=\"antwort1\" class=\"antwort\">A: bla</div>\r\n           <div id=\"antwort2\" class=\"antwort\">B: bla</div>\r\n           <div id=\"antwort3\" class=\"antwort\">C: bla</div>\r\n-          <div id=\"antwort4\" class=\"antwort\">D: bla</div>\r\n+          <div id=\"antwort4\" class=\"antwort\">D: bla</div> -->\r\n         </section>\r\n       </main>\r\n       <footer></footer>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1757017974114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n \r\n-    <script type=\"module\" src=\"script.js\" defer></script>\r\n-    <script type=\"module\" src=\"script-questions.js\" defer></script>\r\n+    <script type=\"module\" src=\"./script.js\" defer></script>\r\n+    <script type=\"module\" src=\"./script-questions.js\" defer></script>\r\n \r\n     <link rel=\"stylesheet\" href=\"./styles/styles.css\" />\r\n     <title>Wer wird Millionär</title>\r\n   </head>\r\n"
                 }
             ],
             "date": 1756984469840,
