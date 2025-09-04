@@ -77,8 +77,19 @@ div {
 #antwortenWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
+/****** hover effect on answer buttons ******/
+#antwortenWrapper div {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#antwortenWrapper div:hover {
+  transform: scale(1.04); /* Vergrößert das Element */
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Schatteneffekt */
+}
 @media (max-width: 600px) {
   #antwortenWrapper {
     grid-template-columns: 1fr;
