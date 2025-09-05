@@ -134,7 +134,7 @@ function resetGame() {
   output.textContent = "Viel Spaß und Erfolg!";
   currentQuestion = 0;
   for (let i = 0; i < preisstufen.length; i++) {
-    preisstufen[i].style.cssText = `background-color: none`;
+    preisstufen[i].style.background = "inherit";
   }
   document.getElementById("popupWin").style.cssText = `display:none`;
   document.getElementById("popupLose").style.cssText = `display:none`;
