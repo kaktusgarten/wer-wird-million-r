@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <script type="module" src="script.js" defer></script>
     <script type="module" src="script-questions.js" defer></script>
+
 
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Wer wird Millionär</title>
@@ -13,7 +15,7 @@
   <body>
     <!-- Hier gehts los -->
     <div class="container">
-      <header>
+      <header class="header">
         <button id="startButton">Start</button>
 
         <div id="popupWin">
@@ -30,11 +32,15 @@
           </p>
           <button class="popupBtn">Neustart</button>
         </div>
+        <div id="statusContainer">
+          <p id="statusAusgabe">Herzlich Willkommen!</p>
+        </div>
+        <button id="beendenButton">Beenden</button>
       </header>
       <main>
         <section class="contentUndPreisleiter">
           <div id="weitererContent">
-            <img src="/img/logo.png" class="logo" />
+            <img src="./img/logo.png" class="logo" />
           </div>
           <div id="preisStufenBox">
             <div class="preisstufen" style="color: #fff">15 - € 1 MILLION</div>

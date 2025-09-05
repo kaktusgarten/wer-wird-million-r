@@ -1,35 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 @import url(style-header.css);
 
 body {
   margin: 0;
   padding: 0;
   background-color: #061196;
-  background-image: url("/img/background.png");
+  background-image: url("../img/background.png");
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-}
-
-div {
-  border: 2px solid #6d7de9;
-  padding: 1em;
-  margin: 0.5em;
-  border-radius: 1em;
-}
-
-/* Preisstufen */
-#preisStufenBox div {
-  margin: 0;
-  padding: 0;
-
-  border: none;
-  color: orange;
-  font-size: 1.3em;
-  font-weight: 800;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
 .container {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
   width: 90vw;
   margin: auto;
   border: 2px solid #6d7de9;
@@ -38,6 +23,54 @@ div {
   border-radius: 1em;
   display: flex;
   flex-direction: column;
+}
+
+div {
+  border: 2px solid #6d7de9;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 1em;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+#startButton {
+  background-color: #6d7de9;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  min-width: 12rem;
+}
+
+#startButton:hover {
+  background-color: green;
+}
+#beendenButton {
+  background-color: #6d7de9;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  min-width: 12rem;
+}
+
+#beendenButton:hover {
+  background-color: red;
+}
+
+/* Preisstufen */
+
+#preisStufenBox div {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  color: orange;
+  font-size: 1.3em;
+  font-weight: 800;
 }
 
 #weitererContent {
@@ -54,8 +87,19 @@ div {
 #antwortenWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
+/****** hover effect on answer buttons ******/
+#antwortenWrapper div {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#antwortenWrapper div:hover {
+  transform: scale(1.04); /* Vergrößert das Element */
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Schatteneffekt */
+}
 @media (max-width: 600px) {
   #antwortenWrapper {
     grid-template-columns: 1fr;
@@ -95,23 +139,30 @@ div {
   width: 60%;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.2rem;
 }
 
 #antwortenWrapper {
   text-align: center;
 }
 
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 #popupWin {
   position: fixed;
+  z-index: 2;
   top: 20px;
-  left: 20%;
+  left: 2em;
+  right: 2em;
   max-width: 90vw;
-  width: 50%;
+  width: 60%;
   border: 5px dotted green;
   background: rgb(130, 243, 130);
   color: #000;
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   line-height: 1.6em;
@@ -120,18 +171,28 @@ div {
 
 #popupLose {
   position: fixed;
+  z-index: 10;
   top: 20px;
-  left: 20%;
+  left: calc(20% - 1em);
   max-width: 90vw;
-  width: 50%;
-  border: 5px dotted #fff;
+  width: 60%;
+  border: 5px dotted #6d7de9;
   background: rgb(131, 33, 3);
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   line-height: 1.6em;
   display: none;
+}
+
+@media (max-width: 899px) {
+  #popupLose {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+  }
 }
 
 .popupBtn {
