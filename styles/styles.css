@@ -68,6 +68,7 @@ div {
 
 .logo {
   max-width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .question-line {
@@ -99,4 +100,46 @@ div {
 
 #antwortenWrapper {
   text-align: center;
+}
+
+#popupWin {
+  position: fixed;
+  top: 20px;
+  left: 20%;
+  max-width: 90vw;
+  width: 50%;
+  border: 5px dotted green;
+  background: rgb(130, 243, 130);
+  color: #000;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+#popupLose {
+  position: fixed;
+  top: 20px;
+  left: 20%;
+  max-width: 90vw;
+  width: 50%;
+  border: 5px dotted #fff;
+  background: rgb(131, 33, 3);
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6em;
+  display: block;
+}
+
+.popupBtn {
+  width: 80%;
+  padding: 1em;
+  background: #0b1b3f;
+  color: #fff;
+  border-radius: 2em;
+  cursor: grab;
+  font-size: 1em;
+  padding: 10px;
 }
