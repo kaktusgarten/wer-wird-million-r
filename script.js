@@ -51,10 +51,10 @@ const checkAnswer = (event) => {
       case currentQuestion < 5:
         moneyIndex = 0;
         break;
-      case currentQuestion >= 5 && currentQuestion < 10:
+      case currentQuestion < 10:
         moneyIndex = 5;
         break;
-      case currentQuestion > 9 && currentQuestion < 14:
+      case currentQuestion < 15:
         moneyIndex = 10;
         break;
       default:
