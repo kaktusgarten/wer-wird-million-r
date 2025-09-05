@@ -48,11 +48,14 @@ const checkAnswer = (event) => {
     );
     // Output bei falscher Antwort
     switch (true) {
-      case currentQuestion <= 5:
+      case currentQuestion < 5:
         moneyIndex = 0;
         break;
-      case currentQuestion <= 15:
+      case currentQuestion < 10:
         moneyIndex = 5;
+        break;
+      case currentQuestion < 15:
+        moneyIndex = 10;
         break;
       default:
         moneyIndex = 0;
