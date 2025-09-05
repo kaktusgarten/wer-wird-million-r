@@ -110,8 +110,8 @@ const quizQuestions = [
   {
     question: "Welches Gas atmen wir hauptsächlich ein?",
     answers: [
-      { text: "Stickstoff", correct: false },
-      { text: "Sauerstoff", correct: true },
+      { text: "Stickstoff", correct: true },
+      { text: "Sauerstoff", correct: false },
       { text: "Kohlendioxid", correct: false },
       { text: "Argon", correct: false }
     ]
