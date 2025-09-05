@@ -115,6 +115,7 @@ div {
   font-weight: bold;
   text-align: center;
   line-height: 1.6em;
+  display: none;
 }
 
 #popupLose {
@@ -130,7 +131,7 @@ div {
   font-weight: bold;
   text-align: center;
   line-height: 1.6em;
-  display: block;
+  display: none;
 }
 
 .popupBtn {

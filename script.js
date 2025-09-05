@@ -5,6 +5,7 @@ const startBtn = document.getElementById("startButton");
 const preisstufenBox = document.getElementById("preisStufenBox");
 const frage = document.getElementById("frage");
 const antwortenWrapper = document.getElementById("antwortenWrapper");
+const popupBtn = document.getElementsByClassName("popupBtn");
 
 let preisstufen = document.getElementsByClassName("preisstufen");
 let currentQuestion = 0;
@@ -22,11 +23,14 @@ const checkAnswer = (event) => {
 
   if (filteredArray.length === 0) {
     event.target.style.background = "red";
-    console.log("no correct answer");
-    // alert("Sie haben Verloren...");
-
+    document.getElementById("popupLose").style.cssText = `display:block`;
     return;
   }
+
+  if (currentQuestion === 14) {
+    document.getElementById("popupWin").style.cssText = `display:block`;
+  }
+
   preisstufen[14 - currentQuestion].style.background = "red";
   event.target.style.background = "green";
   currentQuestion++;
@@ -51,12 +55,17 @@ const startGame = () => {
 };
 
 startBtn.addEventListener("click", resetGame);
+popupBtn[0].addEventListener("click", resetGame);
+popupBtn[1].addEventListener("click", resetGame);
 
 function resetGame() {
   currentQuestion = 0;
   for (let i = 0; i < preisstufen.length; i++) {
     preisstufen[i].style.cssText = `background-color: none`;
   }
+  document.getElementById("popupWin").style.cssText = `display:none`;
+  document.getElementById("popupLose").style.cssText = `display:none`;
+
   startGame();
 }
 startGame();
