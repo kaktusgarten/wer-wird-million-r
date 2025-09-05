@@ -46,12 +46,11 @@ const checkAnswer = (event) => {
   if (filteredArray.length === 0) {
     event.target.style.background = "red";
     console.log("no correct answer");
-    document.getElementById("popupLose").style.cssText = `display:block`;
     Array.from(antwortenWrapper.children).forEach((child) =>
       child.classList.add("disabled")
     );
     // Output bei falscher Antwort
-    switch (currentQuestion) {
+    switch (true) {
       case currentQuestion <= 5:
         moneyIndex = 0;
         break;
@@ -65,7 +64,18 @@ const checkAnswer = (event) => {
       "Schade, Sie haben verloren und gehen mit " +
       moneyArray[moneyIndex] +
       "\u20AC nach Hause!";
+
+    const ausgabe = document.createElement("p");
+    ausgabe.textContent =
+      "Schade, Sie haben verloren und gehen mit " +
+      moneyArray[moneyIndex] +
+      "\u20AC nach Hause!";
+
+    document.getElementById("popupLose").appendChild(ausgabe);
+    document.getElementById("popupLose").style.cssText = `display:block`;
+
     beendenBtn.classList.add("disabled");
+
     return;
   }
 
@@ -74,7 +84,6 @@ const checkAnswer = (event) => {
   }
 
   preisstufen[14 - currentQuestion].style.background = "red";
-  preisstufen[14 - currentQuestion].style.paddingInline = "1rem";
   event.target.style.background = "green";
 
   Array.from(antwortenWrapper.children).forEach((child) =>
@@ -124,7 +133,7 @@ function resetGame() {
   output.textContent = "Viel Spaß und Erfolg!";
   currentQuestion = 0;
   for (let i = 0; i < preisstufen.length; i++) {
-    preisstufen[i].style.cssText = `background-color: none`;
+    preisstufen[i].style.background = "inherit";
   }
   document.getElementById("popupWin").style.cssText = `display:none`;
   document.getElementById("popupLose").style.cssText = `display:none`;
