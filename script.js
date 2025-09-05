@@ -69,6 +69,10 @@ const checkAnswer = (event) => {
       moneyArray[moneyIndex] +
       "\u20AC nach Hause!";
 
+    // LOST IMAGE
+    document.getElementsByClassName("headerBild")[0].src =
+      "./img/guentherIstTraurig.webp";
+
     document.getElementById("popupLose").appendChild(ausgabe);
     document.getElementById("popupLose").style.cssText = `display:block`;
 
@@ -137,11 +141,11 @@ function resetGame() {
   document.getElementById("popupWin").style.cssText = `display:none`;
   document.getElementById("popupLose").style.cssText = `display:none`;
 
-  console.log("RESET GAME");
-  console.log(document.getElementsByClassName("ausgabeInfo"));
-
   if (document.getElementsByClassName("ausgabeInfo").length !== 0)
     document.getElementsByClassName("ausgabeInfo")[0].remove();
+
+  document.getElementsByClassName("headerBild")[0].src =
+    "./img/guenterJauch.webp";
 
   startGame();
 }
