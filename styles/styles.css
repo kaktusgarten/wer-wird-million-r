@@ -112,6 +112,7 @@ div {
 
 .logo {
   max-width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .question-line {
@@ -148,4 +149,59 @@ div {
 .disabled {
   opacity: 0.6;
   pointer-events: none;
+}
+
+#popupWin {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 2em;
+  right: 2em;
+  max-width: 90vw;
+  width: 60%;
+  border: 5px dotted green;
+  background: rgb(130, 243, 130);
+  color: #000;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6em;
+  display: none;
+}
+
+#popupLose {
+  position: fixed;
+  z-index: 10;
+  top: 20px;
+  left: calc(20% - 1em);
+  max-width: 90vw;
+  width: 60%;
+  border: 5px dotted #6d7de9;
+  background: rgb(131, 33, 3);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6em;
+  display: none;
+}
+
+@media (max-width: 899px) {
+  #popupLose {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+  }
+}
+
+.popupBtn {
+  width: 80%;
+  padding: 1em;
+  background: #0b1b3f;
+  color: #fff;
+  border-radius: 2em;
+  cursor: grab;
+  font-size: 1em;
+  padding: 10px;
 }
