@@ -46,12 +46,11 @@ const checkAnswer = (event) => {
   if (filteredArray.length === 0) {
     event.target.style.background = "red";
     console.log("no correct answer");
-    document.getElementById("popupLose").style.cssText = `display:block`;
     Array.from(antwortenWrapper.children).forEach((child) =>
       child.classList.add("disabled")
     );
     // Output bei falscher Antwort
-    switch (currentQuestion) {
+    switch (true) {
       case currentQuestion <= 5:
         moneyIndex = 0;
         break;
@@ -65,7 +64,18 @@ const checkAnswer = (event) => {
       "Schade, Sie haben verloren und gehen mit " +
       moneyArray[moneyIndex] +
       "\u20AC nach Hause!";
+
+    const ausgabe = document.createElement("p");
+    ausgabe.textContent =
+      "Schade, Sie haben verloren und gehen mit " +
+      moneyArray[moneyIndex] +
+      "\u20AC nach Hause!";
+
+    document.getElementById("popupLose").appendChild(ausgabe);
+    document.getElementById("popupLose").style.cssText = `display:block`;
+
     beendenBtn.classList.add("disabled");
+
     return;
   }
 
