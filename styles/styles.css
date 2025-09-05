@@ -41,6 +41,11 @@ div {
   font-size: 1.5em;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   min-width: 12rem;
+
+  @media (max-width: 899px) {
+    min-width: 100%;
+    font-size: 1em;
+  }
 }
 
 #startButton:hover {
@@ -55,6 +60,11 @@ div {
   font-size: 1.5em;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   min-width: 12rem;
+
+  @media (max-width: 899px) {
+    min-width: 100%;
+    font-size: 1em;
+  }
 }
 
 #beendenButton:hover {
@@ -204,7 +214,7 @@ div {
 .popupBtn {
   width: 80%;
   padding: 1em;
-  background: #0b1b3f;
+  background: #6d7de9;
   color: #fff;
   border-radius: 2em;
   cursor: grab;
