@@ -112,7 +112,7 @@ const checkAnswer = (event) => {
       child.classList.remove("disabled")
     );
     startGame();
-  }, 3000);
+  }, 100);
 
   console.log("filteredArray", filteredArray);
 };
