@@ -177,6 +177,7 @@ div {
   text-align: center;
   line-height: 1.6em;
   display: none;
+  opacity: 0.9;
 }
 
 #popupLose {

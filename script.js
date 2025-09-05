@@ -48,11 +48,14 @@ const checkAnswer = (event) => {
     );
     // Output bei falscher Antwort
     switch (true) {
-      case currentQuestion <= 5:
+      case currentQuestion < 5:
         moneyIndex = 0;
         break;
-      case currentQuestion <= 15:
+      case currentQuestion >= 5 && currentQuestion < 10:
         moneyIndex = 5;
+        break;
+      case currentQuestion > 9 && currentQuestion < 14:
+        moneyIndex = 10;
         break;
       default:
         moneyIndex = 0;
@@ -109,7 +112,7 @@ const checkAnswer = (event) => {
       child.classList.remove("disabled")
     );
     startGame();
-  }, 3000);
+  }, 100);
 
   console.log("filteredArray", filteredArray);
 };
