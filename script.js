@@ -1,6 +1,5 @@
 import quizQuestions from "./script-questions.js";
 
-console.log(quizQuestions);
 const startBtn = document.getElementById("startButton");
 const preisstufenBox = document.getElementById("preisStufenBox");
 const frage = document.getElementById("frage");
@@ -33,7 +32,6 @@ const moneyArray = [
   "1.000.000",
 ];
 const checkAnswer = (event) => {
-  console.log(event.target);
   const filteredArray = quizQuestions[currentQuestion].answers.filter(
     (answer) =>
       event.target.textContent === answer.text && answer.correct === true
@@ -45,7 +43,6 @@ const checkAnswer = (event) => {
 
   if (filteredArray.length === 0) {
     event.target.style.background = "red";
-    console.log("no correct answer");
     Array.from(antwortenWrapper.children).forEach((child) =>
       child.classList.add("disabled")
     );
