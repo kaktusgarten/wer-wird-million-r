@@ -110,6 +110,7 @@ const checkAnswer = (event) => {
   console.log("filteredArray", filteredArray);
 };
 const startGame = () => {
+  console.log("Start Game");
   antwortenWrapper.innerHTML = "";
   frage.textContent = quizQuestions[currentQuestion].question;
   beendenBtn.classList.remove("disabled");
@@ -136,7 +137,11 @@ function resetGame() {
   document.getElementById("popupWin").style.cssText = `display:none`;
   document.getElementById("popupLose").style.cssText = `display:none`;
 
-  document.getElementsByClassName("ausgabeInfo")[0].remove();
+  console.log("RESET GAME");
+  console.log(document.getElementsByClassName("ausgabeInfo"));
+
+  if (document.getElementsByClassName("ausgabeInfo").length !== 0)
+    document.getElementsByClassName("ausgabeInfo")[0].remove();
 
   startGame();
 }
