@@ -84,7 +84,6 @@ const checkAnswer = (event) => {
   }
 
   preisstufen[14 - currentQuestion].style.background = "red";
-  preisstufen[14 - currentQuestion].style.paddingInline = "1rem";
   event.target.style.background = "green";
 
   Array.from(antwortenWrapper.children).forEach((child) =>
