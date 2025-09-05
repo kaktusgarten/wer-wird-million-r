@@ -66,6 +66,7 @@ const checkAnswer = (event) => {
       "\u20AC nach Hause!";
 
     const ausgabe = document.createElement("p");
+    ausgabe.classList.add("ausgabeInfo");
     ausgabe.textContent =
       "Schade, Sie haben verloren und gehen mit " +
       moneyArray[moneyIndex] +
@@ -137,6 +138,8 @@ function resetGame() {
   }
   document.getElementById("popupWin").style.cssText = `display:none`;
   document.getElementById("popupLose").style.cssText = `display:none`;
+
+  document.getElementsByClassName("ausgabeInfo")[0].remove();
 
   startGame();
 }
